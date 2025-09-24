@@ -1,0 +1,32 @@
+name: KY-Workshop-Python
+runtime:
+  name: python
+  options:
+    toolchain: poetry
+description: Workshop example deploying an EC2 instance, encrypted bucket, and database
+config:
+  pulumi:tags:
+    value:
+      workshop: "true"
+  namespace:
+    type: string
+    description: Namespace for resources.
+    default: huckstream
+  environment:
+    type: string
+    description: Environment name.
+    default: wksp
+  name:
+    type: string
+    description: Resource name.
+  ##
+  # Step 1.a: deploy with the stack name referenced
+  ##
+  # vpcStack:
+  #   description: The name of the Pulumi stack that deploys the OpenVPN resources
+  #   default: HuckStream/KY-Workshop-Prep/main
+template:
+  config:
+    aws:region:
+      description: The AWS region to deploy into
+      default: us-east-1

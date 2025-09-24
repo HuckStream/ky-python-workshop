@@ -1,0 +1,10 @@
+config:
+  KY-Workshop-Python:name: elisabeth
+  KY-Workshop-Python:vpcStack: Huckstream/KY-Workshop-Python/vpc-reference
+  my_ip: 38.142.48.227/32
+environment:
+  - aws/wksp
+  ##
+  # Step 1.b use the environment
+  ##
+  - wksp/configuration-and-settings
