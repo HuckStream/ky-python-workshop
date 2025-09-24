@@ -20,9 +20,6 @@ def main():
     # Retrieve stack references and outputs for main VPC infrastructure deployment stack.
     ######
 
-    # Get the current AWS region
-    region = aws.get_region().name
-
     ##
     # ALT: Reference via Stack Name
     ##
