@@ -14,7 +14,7 @@ Log into AWS SSO via the start URL and verify access to account
 
 ### Stack Configuration
 
-- Find your username and CIDR, i.e. `bcenter` and `10.x.0.0/16`
+- Find your username, i.e. `bcenter`
 
 - Set required configuration:
 
@@ -22,6 +22,8 @@ Log into AWS SSO via the start URL and verify access to account
   pulumi config set aws:region us-east-1
   pulumi config set namespace your-namespace
   pulumi config set name your-username
+  pulumi config set my_ip your-public-ip
+  pulumi config set vpcStack vpc-stack-name
   ```
 
 - Create stack
@@ -103,3 +105,16 @@ Log into AWS SSO via the start URL and verify access to account
     --key test.txt \
     --version-id 86BPXBR7RHyN7ZlgSGF3sesAZlPSEwxO
   ```
+
+## Step 5 - Deploy Database
+
+- Uncomment code related to Step 5 in `__main__.py`
+
+- Run update
+  ```bash
+  pulumi up
+  ```
+
+- Connect to the RDS Aurora PostgreSQL database using the connection details from Pulumi outputs
+
+- Verify database connectivity and configuration in AWS Console
