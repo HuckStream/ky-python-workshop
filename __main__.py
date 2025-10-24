@@ -97,7 +97,7 @@ def main():
     #     # Also uncomment outputs labeled 'S3 Bucket Outputs' at the bottom
     #     ######
 
-    #     "vpce_id": s3_endpoint_id,
+    #     # "vpce_id": s3_endpoint_id,
     # })
 
     ######
