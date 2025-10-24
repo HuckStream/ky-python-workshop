@@ -22,9 +22,9 @@ config:
   ##
   # Step 1.a: deploy with the stack name referenced
   ##
-  # vpcStack:
-  #   description: The name of the Pulumi stack that deploys the OpenVPN resources
-  #   default: HuckStream/KY-Workshop-Prep/main
+  vpcStack:
+    description: The name of the Pulumi stack that deploys the OpenVPN resources
+    default: HuckStream/KY-Workshop-Python/vpc-reference
 template:
   config:
     aws:region:
